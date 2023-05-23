@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "585019864739",
+    "firebase_url": "https://shorts-2868a-default-rtdb.firebaseio.com",
+    "project_id": "shorts-2868a",
+    "storage_bucket": "shorts-2868a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585019864739:android:2c4eb5c7499e798630f116",
+        "android_client_info": {
+          "package_name": "com.example.youtubeshorts"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585019864739-924uvqhkjrmiid40loi6c8klrsb2av6k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGX0Kmyoe-bhcFjW55Qx4rMS7oNrdG2Qo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "585019864739-924uvqhkjrmiid40loi6c8klrsb2av6k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
