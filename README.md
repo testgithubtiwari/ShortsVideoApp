@@ -7,3 +7,5 @@ This is a simple app where you see videos like Tik-Tok and Youtube Shorts
 #### The third one is showing the media play. It have few of the controls of the media like you can forward or back the play and also you can stop the media anytime.
 
 # ![Screenshot (157)](https://github.com/testgithubtiwari/ShortsVideoApp/assets/111584498/17d5abe3-8c0f-4034-9f19-d81144eb5cda)
+
+## All the code files are in the master Branch.
