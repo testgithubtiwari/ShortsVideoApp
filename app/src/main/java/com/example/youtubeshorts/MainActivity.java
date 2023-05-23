@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.app.ProgressDialog;
 import android.graphics.drawable.ColorDrawable;
@@ -28,13 +29,23 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<thumbnailData> list;
     private ThumbnailAdapter adapter;
     private DatabaseReference reference;
+    private SwipeRefreshLayout swipeRefreshLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().setTitle("Videos");
+        swipeRefreshLayout=findViewById(R.id.swipeRefreshLayout);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.teal_700)));
         thumbnailRecycler=findViewById(R.id.Recycler);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                list.clear();
+                getThumbnail();
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
         pd=new ProgressDialog(this);
         reference= FirebaseDatabase.getInstance().getReference();
         thumbnailRecycler.setLayoutManager(new LinearLayoutManager(this));
